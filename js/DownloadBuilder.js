@@ -20,13 +20,10 @@
     "use strict";
 
     // Function object constructor
-    var downloadBuilder = function(obj) {
+    var DownloadBuilder = function(obj) {
 
         // Sets the library options
         this.options = {
-
-            // Caching option (Defaults to an hour)
-            "cache": (obj && obj.cache) || 3600000,
 
             // Location option (Defaults to an local)
             "location": (obj && obj.location) || "local",
@@ -42,13 +39,26 @@
 
         };
 
+        // Cache option (defaults to an hour (in milliseconds))
+        if(obj.cache !== undefined) {
+
+            this.options.cache = +obj.cache;
+
+        }
+
+        else {
+
+            this.options.cache = 3600000;
+
+        }
+
         // Sets up the plugin
         this._create();
 
     };
 
     // Adds methods to the downloadBuilder prototype object that are shared between all instances
-    downloadBuilder.prototype = {
+    DownloadBuilder.prototype = {
 
         // Library Version Number
         VERSION: "0.1.0",
@@ -635,6 +645,6 @@
     };
 
     // Makes the local downloadBuilder object global
-    window.downloadBuilder = downloadBuilder;
+    window.DownloadBuilder = DownloadBuilder;
 
 })); // End of Library
