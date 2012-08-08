@@ -13,12 +13,6 @@ p {
 .headerDoc {
   color: #005580;
 }
-.select, .select2 {
-  float:left;
-}
-.select2 {
-  padding-left: 20px;
-}
 span.note {
   font-size: 14px;
 }
