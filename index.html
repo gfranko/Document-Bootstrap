@@ -1,73 +1,158 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Document-bootstrap : A Boilerplate project that incorporates JavaScript libraries, jQuery plugins, and Twitter Bootstrap to save developers time when creating project pages and custom project builds." />
+    <meta charset="utf-8">
+    <title>Document-Bootstrap</title>
+    <!-- Mobile viewport optimized -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Mobile Internet Explorer allows us to activate ClearType technology for smoothing fonts for easy reading -->
+    <meta http-equiv="cleartype" content="on">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/black-tie/jquery-ui.css" rel="stylesheet">
+    <link href="css/jquery.tocify.css" rel="stylesheet">
+    <link href="css/prettify.css" type="text/css" rel="stylesheet" />
+    <link href="css/styles.css" type="text/css" rel="stylesheet" />
 
-    <title>Document-bootstrap</title>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
   </head>
 
   <body>
+<a href="https://github.com/gfranko/jquery.tocify.js" target="_blank" id="fork-me"><img style="position: fixed;top: 0; right: 0; border: 0;z-index:999999;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub" alt="Fork me on GitHub"></a>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Document-Bootstrap</a>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/gfranko/Document-Bootstrap">View on GitHub</a>
-
-          <h1 id="project_title">Document-bootstrap</h1>
-          <h2 id="project_tagline">A Boilerplate project that incorporates JavaScript libraries, jQuery plugins, and Twitter Bootstrap to save developers time when creating project pages and custom project builds.</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/gfranko/Document-Bootstrap/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/gfranko/Document-Bootstrap/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3 tocify">
+          <div id="toc">
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+          <div class="hero-unit">
+            <h1>Document-Bootstrap</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+            <br /><br />
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+            <h2>Description</h2>
+            <p>A Boilerplate project that incorporates JavaScript libraries, jQuery plugins, and Twitter Bootstrap to save developers time when creating project pages and custom project builds.</p>
+            <br />
+            <p>The project is hosted on <a href="https://github.com/gfranko/Document-Bootstrap" target="_blank" class="projectLinks">Github</a> and is available for use under the <a href="https://github.com/gfranko/Document-Bootstrap/blob/master/MIT-LICENSE.txt" target="_blank" class="projectLinks">MIT software license</a>.  You can report bugs and discuss features on the <a href="https://github.com/gfranko/Document-Bootstrap/issues?sort=created&direction=desc&state=open" target="_blank">GitHub issues page</a>, or send tweets to <a href="http://www.twitter.com/gregfranko" target="_blank">@gregfranko</a>.
+            </p>
+            <p>
+              <a class="btn btn-primary btn-large" href="https://github.com/gfranko/Document-Bootstrap" target="_blank">Fork on Github &raquo;</a>
+              <a class="btn btn-large" href="documentation.html" target="_blank">View Project &raquo;</a>
+            </p>
+          </div>
+          <h2>Included Libraries/Plugins</h2>
+          <br />
+          <p class="well">
+              <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap 2.0+</a>
+              <br /><br />
+              <a href="http://jquery.com" target="_blank">jQuery 1.7.2+</a>
+              <br /><br />
+              <a href="http://jqueryui.com/download" target="_blank">jQueryUI 1.8.22+</a>
+              <br /><br />
+              <a href="http://gregfranko.com/jquery.tocify.js" target="_blank">jquery.tocify.js</a>
+              <br /><br />
+              <a href="https://github.com/gfranko/DownloadBuilder.js" target="_blank">DownloadBuilder.js</a>
+          </p>
+          <br />
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+          <h2>Notable Features</h2>
+          <br />
+          <p class="well">
+              <span class="headerDoc">Mobile, Tablet, and Desktop Support</span>
+              <br /><br />
+              <span class="headerDoc">Responsive Design</span>
+              <br /><br />
+              <span class="headerDoc">Table of Contents Support</span>
+              <br /><br />
+              <span class="headerDoc">Custom Download Builder Support</span>
+          </p>
+          <br />
 
-<h3>Designer Templates</h3>
+          <h2>Browser Support</h2>
+          <br />
+          <p class="well">Tested in <span class="headerDoc">IE8+, Firefox 11+, Chrome, Safari 4+</span></p>
+          <br />
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+          <h2>Getting Started</h2>
+          <br />
+          <p>1. <a href="https://github.com/gfranko/Document-Bootstrap" target="_blank">Download the entire project</a></p>
+          <br /><br />
+          <p>2. Customize <span class="headerDoc">documentation.html</span> (Review <a href="http://gregfranko.com/jquery.tocify.js" target="_blank">jquery.tocify.js</a> documentation)</p>
+          <br /><br />
+          <p>3. Customize <span class="headerDoc">customDownload.html</span> (Review <a href="https://github.com/gfranko/DownloadBuilder.js" target="_blank">DownloadBuilder.js</a> documentation)</p>
+          </p>
 
-<h3>Rather Drive Stick?</h3>
+        </div><!--/span-->
+      </div><!--/row-->
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+      <hr>
 
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Document-bootstrap maintained by <a href="https://github.com/gfranko">gfranko</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer align="center">
+        <p>Copyright &copy; 2012 Greg Franko
+<br /><br />
+          Published by Github Pages</p>
       </footer>
-    </div>
 
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/jquery-ui-1.8.22.custom.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.tocify.min.js"></script>
+    <script src="js/prettify.js"></script>
+    <script>
+
+        $(function() {
+
+            $("#toc").tocify({ selectors: "h2, h3, h4", scrollTo: 60, highlightOffset: 60, extendPage: true });
+
+            prettyPrint();
+
+            $(".optionName").popover();
+
+            $("a[href='#']").click(function(event) {
+ 
+                event.preventDefault();
+
+            });
+
+        });
+    </script>
     
 
   </body>
