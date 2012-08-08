@@ -40,7 +40,7 @@
         };
 
         // Cache option (defaults to an hour (in milliseconds))
-        if(obj.cache !== undefined) {
+        if(obj && obj.cache !== undefined) {
 
             this.options.cache = +obj.cache;
 
