@@ -77,7 +77,7 @@
   </div>
   <div class="row">
     <div class="span3">
-      <label class="checkbox"><input checked="checked" type="checkbox" value="src/stylesheets/SelectBoxIt/jquery.selectBoxIt.css"> SelectBoxIt CSS</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="src/stylesheets/SelectBoxIt/jquery.selectBoxIt.css" title="Name of File" data-content="File Description"> SelectBoxIt CSS</label>
     </div>
   </div>
   <br />
@@ -97,22 +97,22 @@
   </div>
   <div class="row">
     <div class="span3">
-      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.core.min.js" disabled> SelectBoxIt Core</label>
-      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.ariaAccessibility.min.js"> Aria Accessibility</label>
-      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.destroy.min.js"> Destroy method</label>
-      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.disable.min.js"> Disable method</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.core.min.js" title="Name of File" data-content="File Description"> SelectBoxIt Core</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.ariaAccessibility.min.js" title="Name of File" data-content="File Description"> Aria Accessibility</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.destroy.min.js" title="Name of File" data-content="File Description"> Destroy method</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.disable.min.js" title="Name of File" data-content="File Description"> Disable method</label>
     </div>
     <div class="span3">
-      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.dynamicPositioning.min.js"> Dynamic Positioning</label>
-      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.enable.min.js"> Enable method</label>
-      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.jqueryui.min.js"> jQueryUI CSS Support</label>
-      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.keyboardNavigation.min.js"> Keyboard Navigation</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.dynamicPositioning.min.js" title="Name of File" data-content="File Description"> Dynamic Positioning</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.enable.min.js" title="Name of File" data-content="File Description"> Enable method</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.jqueryui.min.js" title="Name of File" data-content="File Description"> jQueryUI CSS Support</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.keyboardNavigation.min.js" title="Name of File" data-content="File Description"> Keyboard Navigation</label>
     </div>
     <div class="span3">
-      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.keyboardSearch.min.js"> Keyboard Search</label>
-      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.setOption.min.js">Set Option method</label>
-      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.setOptions.min.js"> Set Options method</label>
-      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.wait.min.js"> Wait method</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.keyboardSearch.min.js" title="Name of File" data-content="File Description"> Keyboard Search</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.setOption.min.js" title="Name of File" data-content="File Description">Set Option method</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.setOptions.min.js" title="Name of File" data-content="File Description"> Set Options method</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="src/javascripts/jquery.selectBoxIt.wait.min.js" title="Name of File" data-content="File Description"> Wait method</label>
     </div>
   </div><!-- /row -->
   <br />
@@ -148,6 +148,8 @@
 
         $(function() {
 
+            $("input[type='checkbox']").popover();
+
             $("a[href='#']").click(function(event) {
  
                 event.preventDefault();
@@ -164,7 +166,7 @@
 
             });
 
-            var builder = new DownloadBuilder({ "location": "github", "author": "gfranko", "repo": "jquery.selectboxit.js", "branch": "master" });
+            var builder = new DownloadBuilder({ "location": "github", "author": "gfranko", "repo": "jquery.selectboxit.js", "branch": "dev" });
 
             $("#css-generate").on("click", function() {
 
@@ -211,7 +213,9 @@
             });
 
         });
+
     </script>
+
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
