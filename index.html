@@ -63,7 +63,7 @@
             <br /><br />
 
             <h2>Description</h2>
-            <p>A Boilerplate project that incorporates JavaScript libraries, jQuery plugins, and Twitter Bootstrap to save developers time when creating project pages and custom project builds.</p>
+            <div class="github-widget" data-repo="gfranko/Document-Bootstrap"></div>
             <br />
             <p>The project is hosted on <a href="https://github.com/gfranko/Document-Bootstrap" target="_blank" class="projectLinks">Github</a> and is available for use under the <a href="https://github.com/gfranko/Document-Bootstrap/blob/master/LICENSE-MIT" target="_blank" class="projectLinks">MIT software license</a>.  You can report bugs and discuss features on the <a href="https://github.com/gfranko/Document-Bootstrap/issues?sort=created&direction=desc&state=open" target="_blank">GitHub issues page</a>, or send tweets to <a href="http://www.twitter.com/gregfranko" target="_blank">@gregfranko</a>.
             </p>
@@ -130,11 +130,12 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery-1.7.2.min.js"></script>
-    <script src="js/jquery-ui-1.8.22.custom.min.js"></script>
+    <script src="js/jquery-1.8.0.min.js"></script>
+    <script src="js/jquery-ui-1.8.23.custom.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.tocify.min.js"></script>
     <script src="js/prettify.js"></script>
+    <script src="js/githubrepo.js"></script>
     <script>
 
         $(function() {
@@ -143,7 +144,7 @@
 
             prettyPrint();
 
-            $(".optionName").popover();
+            $(".optionName").popover({ trigger: "hover" });
 
             $("a[href='#']").click(function(event) {
  
