@@ -34,6 +34,7 @@ If you find that you need a feature that Document-Bootstrap does not currently s
 - Updated to [Tocify 0.5.0](http://gregfranko.com/jquery.tocify.js/)
 - Updated to [jQuery 1.8.0](http://www.jquery.com)
 - Updated to [jQueryUI 1.8.23](http://www.jqueryui.com)
+- Added [Github-jQuery-Repo-Widget](https://github.com/JoelSutherland/GitHub-jQuery-Repo-Widget)
 - Updated CSS styles
 
 `0.1.0` - August 8, 2012
