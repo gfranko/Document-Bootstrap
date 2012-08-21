@@ -7,13 +7,13 @@ A Boilerplate project that incorporates JavaScript libraries, jQuery plugins, an
 
 **Notable Features**
 
-   - Mobile, Tablet, and Desktop Support
-
    - Responsive Design
 
    - Table of Contents Support
 
    - Custom Download Builder Support
+
+   - Github Repo Include Support (Thanks to [Joel Sutherland](https://github.com/JoelSutherland/))
 
 ##Browser Support
 IE8+, Firefox 11+, Chrome, Safari 4+
