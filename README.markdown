@@ -28,6 +28,11 @@ If you find that you need a feature that Document-Bootstrap does not currently s
 
 ##Change Log
 
+`0.3.0` - October 23, 2012
+
+- Updated to [jQuery 1.8.2](http://jquery.com)
+- Updated to [Tocify 1.0.0](http://gregfranko.com/jquery.tocify.js/)
+
 `0.2.0` - August 21, 2012
 
 - Updated to [Twitter Bootstrap 2.1](http://twitter.github.com/bootstrap/)
