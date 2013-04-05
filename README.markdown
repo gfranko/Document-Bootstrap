@@ -28,6 +28,10 @@ If you find that you need a feature that Document-Bootstrap does not currently s
 
 ##Change Log
 
+`0.4.0` - April 5, 2013
+
+- Updated all libs and **removed History.js**
+
 `0.3.0` - October 23, 2012
 
 - Updated to [jQuery 1.8.2](http://jquery.com)
