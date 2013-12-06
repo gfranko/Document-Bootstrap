@@ -28,6 +28,10 @@ If you find that you need a feature that Document-Bootstrap does not currently s
 
 ##Change Log
 
+`0.4.1` - (alpha) December 6, 2013 (Ilija Injac)
+- Updated to [Twitter Bootstrap 3](http://twitter.github.com/bootstrap/)
+- Added [Bootswatch](http://bootswatch.com/) themes directory
+
 `0.4.0` - April 5, 2013
 
 - Updated all libs and **removed History.js**
