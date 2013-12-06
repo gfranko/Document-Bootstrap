@@ -9,12 +9,13 @@
     <meta http-equiv="cleartype" content="on">
 
     <!-- Le styles -->
-    <link href="css/bootswatch/Flatly/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootswatch/Cosmo/bootstrap.min.css" rel="stylesheet">
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/black-tie/jquery-ui.css" rel="stylesheet">
     <link href="css/jquery.tocify.css" rel="stylesheet">
     <link href="css/prettify.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-
+	<link href="rainbow/themes/blackboard.css" rel="stylesheet" type="text/css">
+	 <link rel="stylesheet" type="text/css" href="rainbowlines/theme.css" media="screen" />
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -144,23 +145,63 @@
           <span class="note"><strong>Note: </strong> All of the plugin files are in the <code>src</code> directory (this includes both the JavaScript and CSS files). If you want to see an example page with all of the files included, look in the <code>demos</code> directory.
           </span>
           </p>
-          <h3>HTML</h3>
+          <h3>C#</h3>
           <p></p>
           <p class="well note">
-          Enter HTML Instructions Here
+          C# Code
           </p>
-          <pre class="prettyprint">          // Include appropriate HTML code if needed
-          &lt;div&gt;&lt;/div&gt;
+		  
+          <pre>        
+			<code data-language="csharp">
+public class BadgeGenerator : IBadgeGenerator
+{
+	private IBadgeStorageService badgeStoreageService;
+
+	public BadgeGenerator(IBadgeStorageService service)
+	{
+		if (service == null)
+		{
+			throw new ArgumentNullException("storage service cannot be null", "service");
+		}
+	   
+		this.badgeStoreageService = service;
+	}
+}
+			</code>
           </pre>
-          <p>
+         
           <h3>CSS</h3>
           <p></p>
           <p class="well note">
           Enter CSS Instructions Here
           </p>
-          <pre class="prettyprint">          // Include appropriate CSS code if needed
-          body {
-          }
+          <pre>
+		  <code data-language="css">	
+ * Author: @gregfranko
+ */
+
+/* The Table of Contents container element */
+#toc {
+    width: 20%;
+	max-height: 90%;
+    overflow: auto;
+    position: fixed;
+    border: 0px solid #ccc;
+    webkit-border-radius: 6px;
+    moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+/* The Table of Contents is composed of multiple nested unordered lists.  These styles remove the default styling of an unordered list because it is ugly. */
+#toc ul, #toc li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    line-height: 30px;
+}
+
+		  </code>
           </pre>
           <p>
           <h3>JavaScript</h3>
@@ -168,10 +209,65 @@
           <p class="well note">
               Enter JavaScript Instructions Here
           </p>
-          <pre class="prettyprint">              //Executes your code when the DOM is ready.  Acts the same as $(document).ready().
-              $(function() {
+          <pre>          
+		  <code data-language="javascript">
+;(function () {
 
-              });
+  var
+    object = typeof window != 'undefined' ? window : exports,
+    chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=',
+    INVALID_CHARACTER_ERR = (function () {
+      // fabricate a suitable error object
+      try { document.createElement('$'); }
+      catch (error) { return error; }}());
+
+  // encoder
+  // [https://gist.github.com/999166] by [https://github.com/nignag]
+  object.btoa || (
+  object.btoa = function (input) {
+    for (
+      // initialize result and counter
+      var block, charCode, idx = 0, map = chars, output = '';
+      // if the next input index does not exist:
+      //   change the mapping table to "="
+      //   check if d has no fractional digits
+      input.charAt(idx | 0) || (map = '=', idx % 1);
+      // "8 - idx % 1 * 8" generates the sequence 2, 4, 6, 8
+      output += map.charAt(63 & block >> 8 - idx % 1 * 8)
+    ) {
+      charCode = input.charCodeAt(idx += 3/4);
+      if (charCode > 0xFF) throw INVALID_CHARACTER_ERR;
+      block = block << 8 | charCode;
+    }
+    return output;
+  });
+
+  // decoder
+  // [https://gist.github.com/1020396] by [https://github.com/atk]
+  object.atob || (
+  object.atob = function (input) {
+    input = input.replace(/=+$/, '')
+    if (input.length % 4 == 1) throw INVALID_CHARACTER_ERR;
+    for (
+      // initialize result and counters
+      var bc = 0, bs, buffer, idx = 0, output = '';
+      // get next character
+      buffer = input.charAt(idx++);
+      // character found in table? initialize bit storage and add its ascii value;
+      ~buffer && (bs = bc % 4 ? bs * 64 + buffer : buffer,
+        // and if not first of each 4 characters,
+        // convert the first 8 bits to one ascii character
+        bc++ % 4) ? output += String.fromCharCode(255 & bs >> (-2 * bc & 6)) : 0
+    ) {
+      // try to find character in table (0-63, not found => -1)
+      buffer = chars.indexOf(buffer);
+    }
+    return output;
+  });
+
+}());
+
+		  </code>
           </pre>
           <h2>Options</h2>
           <p class="well note">
@@ -279,12 +375,20 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+		 <script src="rainbow/rainbow.min.js"></script>
+	 <script src="rainbow/language/generic.js"></script>
+	 <script src="rainbow/language/html.js"></script>
+	  <script src="rainbow/language/csharp.js"></script>
+	  <script src="rainbow/language/css.js"></script>
+	  <script src="rainbow/language/javascript.js"></script>
+	   <script src="rainbowlines/rainbow.linenumbers.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.tocify.min.js"></script>
     <script src="js/prettify.js"></script>
     <script src="js/githubrepo.js"></script>
+
     <script>
         $(function() {
 
@@ -300,6 +404,7 @@
 
             });
 
+			Rainbow.color();
         });
     </script>
   

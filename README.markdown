@@ -30,7 +30,10 @@ If you find that you need a feature that Document-Bootstrap does not currently s
 
 `0.4.1` - (alpha) December 6, 2013 (Ilija Injac)
 - Updated to [Twitter Bootstrap 3](http://twitter.github.com/bootstrap/)
+- Updated to [jQuery 2.0.3](http://www.jquery.com)
+- Updated to [jQueryUI 1.10.3](http://www.jqueryui.com)
 - Added [Bootswatch](http://bootswatch.com/) themes directory
+- Added [Rainbow](http://craig.is/making/rainbows/) syntax highlighter
 
 `0.4.0` - April 5, 2013
 
