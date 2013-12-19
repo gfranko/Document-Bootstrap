@@ -1,7 +1,7 @@
 Document-Bootstrap
 ==================
 
-A Boilerplate project that incorporates JavaScript libraries, jQuery plugins, and Twitter Bootstrap to save developers time when creating project pages and providing users with custom project builds.
+A Boilerplate HTML page that incorporates JavaScript libraries, jQuery plugins, and Twitter Bootstrap to save developers time when creating an open-source project page.
 
 [Homepage](http://gregfranko.com/Document-Bootstrap/)
 
@@ -11,17 +11,12 @@ A Boilerplate project that incorporates JavaScript libraries, jQuery plugins, an
 
    - Table of Contents Support
 
-   - Custom Download Builder Support
-
-   - Github Repo Include Support (Thanks to [Joel Sutherland](https://github.com/JoelSutherland/))
-
 ##Browser Support
 IE8+, Firefox 11+, Chrome, Safari 4+
 
 ##Getting Started
 1.  If you want to create a project page for your project, customize documentation.html to fit your project
-2.  If you want to provide users with a custom build of your project, customize customDownload.html to fit your project
-3.  That's it!
+2.  That's it!
 
 ##Forking
 If you find that you need a feature that Document-Bootstrap does not currently support, either let me know via the Document-Bootstrap issue tracker, or fork Document-Bootstrap on Github.
