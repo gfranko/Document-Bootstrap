@@ -14,8 +14,8 @@
     <link href="css/jquery.tocify.css" rel="stylesheet">
     <link href="css/prettify.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-	<link href="rainbow/themes/blackboard.css" rel="stylesheet" type="text/css">
-	 <link rel="stylesheet" type="text/css" href="rainbowlines/theme.css" media="screen" />
+    <link href="css/rainbow/themes/tomorrow-night.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/rainbowlines/theme.css" media="screen" />
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -27,16 +27,6 @@
     <link href="../assets/ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
     <link href="../assets/ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
     <link href="../assets/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
-    <style>
-
-@media (max-width: 767px) {
-    #toc {
-        position: relative;
-        width: 100%;
-        margin: 0px 0px 20px 0px;
-    }
-}
-    </style>
   </head>
 
   <body>
@@ -71,25 +61,6 @@
         </ul>
       </li>
     </ul>
-    <form class="navbar-form navbar-left" role="search">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Link</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-      </li>
-    </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
      
@@ -108,7 +79,6 @@
 
             <h2>Description</h2>
             <p>Enter Project Repo Description Here</p>
-            <div class="github-widget" data-repo="gfranko/Document-Bootstrap"></div>
             <br>
             <p>The project is hosted on <a class="projectLinks" href="#" target="_blank">Github</a> and is available for use under the <a class="projectLinks" href="#" target="_blank">MIT software license</a>.  You can report bugs and discuss features on the <a href="#" target="_blank">GitHub issues page</a>, or send tweets to <a href="#" target="_blank">Enter Project Twitter Page Here</a>.
             </p>
@@ -183,7 +153,7 @@ public class BadgeGenerator : IBadgeGenerator
 /* The Table of Contents container element */
 #toc {
     width: 20%;
-	max-height: 90%;
+    max-height: 90%;
     overflow: auto;
     position: fixed;
     border: 0px solid #ccc;
@@ -375,36 +345,34 @@ public class BadgeGenerator : IBadgeGenerator
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-		 <script src="rainbow/rainbow.min.js"></script>
-	 <script src="rainbow/language/generic.js"></script>
-	 <script src="rainbow/language/html.js"></script>
-	  <script src="rainbow/language/csharp.js"></script>
-	  <script src="rainbow/language/css.js"></script>
-	  <script src="rainbow/language/javascript.js"></script>
-	   <script src="rainbowlines/rainbow.linenumbers.js"></script>
+    <script src="js/rainbow/rainbow.min.js"></script>
+    <script src="js/rainbow/language/generic.js"></script>
+    <script src="js/rainbow/language/html.js"></script>
+    <script src="js/rainbow/language/css.js"></script>
+    <script src="js/rainbow/language/javascript.js"></script>
+    <script src="js/rainbowlines/rainbow.linenumbers.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.tocify.min.js"></script>
     <script src="js/prettify.js"></script>
-    <script src="js/githubrepo.js"></script>
 
     <script>
         $(function() {
 
-            $("#toc").tocify({ selectors: "h2, h3, h4", scrollTo: 60, highlightOffset: 60, extendPage: true });
+          $("#toc").tocify({ selectors: "h2, h3, h4", scrollTo: 60, highlightOffset: 60, extendPage: true });
 
-            prettyPrint();
+          prettyPrint();
 
-            $(".optionName").popover({ trigger: "hover" });
+          $(".optionName").popover({ trigger: "hover", container: "body" });
 
-            $("a[href='#']").click(function(event) {
- 
-                event.preventDefault();
+          $("a[href='#']").click(function(event) {
 
-            });
+              event.preventDefault();
 
-			Rainbow.color();
+          });
+
+          Rainbow.color();
         });
     </script>
   

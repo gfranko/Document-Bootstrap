@@ -28,6 +28,12 @@ If you find that you need a feature that Document-Bootstrap does not currently s
 
 ##Change Log
 
+`0.5.0` - December 19, 2013
+- Removed the custom download page
+- Removed the Github Repo embed
+- Updated DownloadBuilder.js and Tocify.js
+- Cleaned up a few of the styles
+
 `0.4.1` - (alpha) December 6, 2013 (Ilija Injac)
 - Updated to [Twitter Bootstrap 3](http://twitter.github.com/bootstrap/)
 - Updated to [jQuery 2.0.3](http://www.jquery.com)
